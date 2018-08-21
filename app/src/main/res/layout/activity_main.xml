@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.tozmart.toz_sdk.widge.TozCameraView
+        android:id="@+id/camera"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:tozLineColor="@android:color/white" />
+    <com.tozmart.toz_sdk.widge.TozSensorTipView
+        android:id="@+id/sensorView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        app:tozSensorBallColor="@android:color/holo_green_light"
+        app:tozSensorBallErrorColor="@android:color/holo_red_light"
+        app:tozSensorCircleLineWidth="10"
+        app:tozSensorInCircleColor="@android:color/holo_green_light"
+        app:tozSensorInCircleErrorColor="@android:color/holo_red_light"
+        app:tozSensorOutCircleColor="@android:color/white"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_layout"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/take_photo"
+            android:text="拍照" />
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/grid_off"
+            android:text="关闭边界线"
+            android:layout_gravity="center_vertical"
+            android:checked="false" />
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/switch_btn"
+            android:text="切换背景"
+            android:layout_gravity="center_vertical|end"
+            android:checked="false" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/select_photo"
+            android:text="选择照片" />
+    </LinearLayout>
+</RelativeLayout>
